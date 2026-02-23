@@ -1,0 +1,21 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+.env
+.env.local
+coverage/
+
+test-wallet-base.json
+
+# Environment files with secrets
+.env
+.env.*
+*.env
+
+# Test wallet files
+test-wallet*.json
+
+# Model evaluation results (keep the directory structure)
+test/model-eval/results/*
+!test/model-eval/results/.gitkeep

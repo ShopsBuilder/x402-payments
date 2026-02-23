@@ -1,0 +1,68 @@
+{
+  "name": "@shopsbuilder/x402",
+  "version": "2.0.0",
+  "description": "x402 Payment Required SDK for the ShopsBuilder multichain invoice API (TON / EVM via Telegram bot)",
+  "author": "ShopsBuilder",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "./invoice": {
+      "types": "./dist/invoice/index.d.ts",
+      "import": "./dist/invoice/index.js",
+      "require": "./dist/invoice/index.cjs"
+    },
+    "./server": {
+      "types": "./dist/server/index.d.ts",
+      "import": "./dist/server/index.js",
+      "require": "./dist/server/index.cjs"
+    },
+    "./client": {
+      "types": "./dist/client/index.d.ts",
+      "import": "./dist/client/index.js",
+      "require": "./dist/client/index.cjs"
+    },
+    "./utils": {
+      "types": "./dist/utils/index.d.ts",
+      "import": "./dist/utils/index.js",
+      "require": "./dist/utils/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "test:invoice": "npx tsx test/invoice-integration.ts",
+    "test": "npx tsx test/invoice-integration.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^22.10.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "x402",
+    "payments",
+    "ton",
+    "telegram",
+    "invoice",
+    "shopsbuilder",
+    "web3"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shopsbuilder/x402-sdk"
+  }
+}
