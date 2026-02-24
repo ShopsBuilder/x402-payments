@@ -19,7 +19,7 @@
 
 x402 is a protocol for HTTP-native payments. When a server returns HTTP status `402 Payment Required` it includes payment details in a `PAYMENT-REQUIRED` header. The client pays via Telegram and retries the request with a `PAYMENT-SIGNATURE` header. The server verifies the payment and returns the protected content.
 
-This SDK wires the entire flow to the **ShopsBuilder multichain-invoice-api**: payment links are created on-demand, signed per-payer, and verified against the API before access is granted.
+This SDK wires the entire flow to the **ShopsBuilder Payment Api**: payment links are created on-demand, signed per-payer, and verified against the API before access is granted.
 
 ---
 
